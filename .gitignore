@@ -1,3 +1,5 @@
+#깃 스토리지에 해당 파일들은 인식이 안되도록 설정.
+uploads
 node_modules
 package-lock.json
 # Logs
