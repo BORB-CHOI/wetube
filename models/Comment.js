@@ -14,7 +14,7 @@ const CommentSchema = new mongoose.Schema({
     ref: "User",
   },
   commentNo: {
-    type: Number,
+    type: String,
   },
 });
 
