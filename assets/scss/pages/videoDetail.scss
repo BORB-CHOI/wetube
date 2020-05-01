@@ -59,8 +59,21 @@
         padding: 15px;
         border-radius: 20px;
         border-bottom-left-radius: 0px;
+        position: relative;
         &:not(:last-child) {
           margin-bottom: 15px;
+        }
+        button {
+          background: none;
+          height: 30px;
+          width: 30px;
+          left: -3%;
+          bottom: 1%;
+          border: none;
+          box-shadow: none;
+          font-size: 10px;
+          position: absolute;
+          outline: none;
         }
       }
     }

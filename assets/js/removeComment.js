@@ -29,7 +29,7 @@ const sendRemoveComment = async (e) => {
 };
 
 function init() {
-  removeCommentBtn.addEventListener("click", sendRemoveComment);
+  commentList.addEventListener("click", sendRemoveComment);
 }
 
 if (commentForm) {

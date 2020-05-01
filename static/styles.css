@@ -424,9 +424,21 @@ button.delete {
         color: white;
         padding: 15px;
         border-radius: 20px;
-        border-bottom-left-radius: 0px; }
+        border-bottom-left-radius: 0px;
+        position: relative; }
         .video-detail__container .video__comments .video__comments-list li:not(:last-child) {
           margin-bottom: 15px; }
+        .video-detail__container .video__comments .video__comments-list li button {
+          background: none;
+          height: 30px;
+          width: 30px;
+          left: -3%;
+          bottom: 1%;
+          border: none;
+          box-shadow: none;
+          font-size: 10px;
+          position: absolute;
+          outline: none; }
 
 .user-profile {
   width: 100%;
