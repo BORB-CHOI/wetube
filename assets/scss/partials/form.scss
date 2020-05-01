@@ -32,11 +32,9 @@
     max-width: 320px;
   }
   .fileUpload {
-    //파일선택 버튼 못생김;;
-    display: flex;
     place-items: center;
     label {
-      margin-right: 10px;
+      margin-right: 5px;
       font-weight: 400;
     }
   }

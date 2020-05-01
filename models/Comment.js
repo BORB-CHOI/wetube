@@ -3,12 +3,19 @@ import mongoose from "mongoose";
 const CommentSchema = new mongoose.Schema({
   text: {
     type: String,
-    required: "Text is required"
+    required: "Text is required",
   },
-  createAt: {
+  createdAt: {
     type: Date,
-    default: Date.now
-  }
+    default: Date.now,
+  },
+  creator: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+  },
+  commentNo: {
+    type: Number,
+  },
 });
 
 const model = mongoose.model("Comment", CommentSchema);
