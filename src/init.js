@@ -1,5 +1,6 @@
-import "./db";
+import "@babel/polyfill"; // async funtion을 사용하기 위해 가져온 것
 import dotenv from "dotenv";
+import "./db";
 import app from "./app";
 
 import "./models/Video";
