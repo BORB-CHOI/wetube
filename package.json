@@ -4,10 +4,9 @@
   "description": "Cloning Youtube with Vanilla and NodeJS",
   "author": "Bi Seong Choi",
   "dependencies": {
-    "@babel/core": "^7.8.4",
-    "@babel/node": "^7.8.4",
+    "@babel/node": "^7.8.7",
     "@babel/polyfill": "^7.8.3",
-    "@babel/preset-env": "^7.8.4",
+    "@babel/runtime": "^7.9.6",
     "autoprefixer": "^9.7.4",
     "aws-sdk": "^2.668.0",
     "axios": "^0.19.2",
@@ -23,6 +22,7 @@
     "express": "^4.17.1",
     "express-session": "^1.17.0",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "get-blob-duration": "^1.1.0",
     "helmet": "^3.21.2",
     "mongoose": "^5.9.2",
     "morgan": "^1.9.1",
@@ -43,9 +43,15 @@
   "scripts": {
     "dev:server": "nodemon --exec babel-node init.js --delay 2 --ignore '.scss' --ignore 'static'",
     "dev:assets": "set WEBPACK_ENV=development&&webpack -w",
-    "build:assets": "set WEBPACK_ENV=production&&webpack"
+    "build:assets": "set WEBPACK_ENV=production&&webpack",
+    "build:server": "babel src --out-dir build --ignore 'src/assets', 'src/static', 'src/webpack.config.js'",
+    "build": "npm run build:server && npm run build:assets"
   },
   "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "babel-cli": "^6.26.0",
     "cross-env": "^5.2.1",
     "eslint": "^6.8.0",
     "nodemon": "^2.0.2"
