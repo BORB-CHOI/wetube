@@ -27,22 +27,23 @@ const startRecording = () => {
   videoRecorder.start();
   videoRecorder.addEventListener("dataavailable", handleVideoData);
   recordBtn.addEventListener("click", stopRecording);
-  //   setTimeout(() => videoRecorder.stop(), 5000);
+  setTimeout(() => videoRecorder.stop(), 5000);
 };
 
 const getVideo = async () => {
   try {
     const stream = await navigator.mediaDevices.getUserMedia({
       audio: true,
-      //   video: {width: 1280, height: 720}
+      video: { width: 1280, height: 720 },
     });
     videoPreview.srcObject = stream;
-    // videoPreview.muted = true;
+    videoPreview.muted = true;
     videoPreview.play();
     recordBtn.innerHTML = "Stop recording";
     streamObject = stream;
     startRecording();
   } catch (error) {
+    console.log(error);
     recordBtn.innerHTML = "Cant record";
   } finally {
     recordBtn.removeEventListener("click", getVideo);

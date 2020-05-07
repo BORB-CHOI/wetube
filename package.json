@@ -4,6 +4,11 @@
   "description": "Cloning Youtube with Vanilla and NodeJS",
   "author": "Bi Seong Choi",
   "dependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/node": "^7.8.7",
+    "@babel/polyfill": "^7.8.7",
+    "@babel/preset-env": "^7.9.6",
     "@babel/runtime": "^7.9.6",
     "autoprefixer": "^9.7.4",
     "aws-sdk": "^2.668.0",
@@ -52,11 +57,6 @@
     "prestart": "npm run build"
   },
   "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.9.6",
-    "@babel/node": "^7.8.7",
-    "@babel/polyfill": "^7.8.7",
-    "@babel/preset-env": "^7.9.6",
     "cross-env": "^5.2.1",
     "eslint": "^6.8.0",
     "nodemon": "^2.0.3"
