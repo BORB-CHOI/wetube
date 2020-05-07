@@ -18,7 +18,7 @@ passport.use(
       clientID: process.env.GH_ID,
       clientSecret: process.env.GH_SECRET,
       callbackURL: process.env.PRODUCTION
-        ? `https://agile-garden-83183.herokuapp.com/${routes.githubCallback}`
+        ? `https://agile-garden-83183.herokuapp.com${routes.githubCallback}`
         : `http://localhost:9999${routes.githubCallback}`,
     },
     githubLoginCallback
@@ -31,7 +31,7 @@ passport.use(
       clientID: process.env.FB_ID,
       clientSecret: process.env.FB_SECRET,
       callbackURL: process.env.PRODUCTION
-        ? `https://agile-garden-83183.herokuapp.com/${routes.facebookCallback}`
+        ? `https://agile-garden-83183.herokuapp.com${routes.facebookCallback}`
         : `http://localhost:9999${routes.facebookCallback}`,
       profileFields: ["id", "displayName", "photos", "email"],
       scope: ["public_profile", "email"],
