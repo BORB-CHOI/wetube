@@ -4,7 +4,7 @@ import FacebookStrategy from "passport-facebook";
 import User from "./models/User";
 import {
   githubLoginCallback,
-  facebookLoginCallback
+  facebookLoginCallback,
 } from "./controllers/userController";
 import routes from "./routes";
 
@@ -17,7 +17,9 @@ passport.use(
     {
       clientID: process.env.GH_ID,
       clientSecret: process.env.GH_SECRET,
-      callbackURL: `http://localhost:9999${routes.githubCallback}`
+      callbackURL: process.env.PRODUCTION
+        ? `https://agile-garden-83183.herokuapp.com/${routes.githubCallback}`
+        : `http://localhost:9999${routes.githubCallback}`,
     },
     githubLoginCallback
   )
@@ -28,9 +30,11 @@ passport.use(
     {
       clientID: process.env.FB_ID,
       clientSecret: process.env.FB_SECRET,
-      callbackURL: `https://27949e3e.ngrok.io${routes.facebookCallback}`,
+      callbackURL: process.env.PRODUCTION
+        ? `https://agile-garden-83183.herokuapp.com/${routes.facebookCallback}`
+        : `http://localhost:9999${routes.facebookCallback}`,
       profileFields: ["id", "displayName", "photos", "email"],
-      scope: ["public_profile", "email"]
+      scope: ["public_profile", "email"],
     },
     facebookLoginCallback
   )
