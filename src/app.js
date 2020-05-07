@@ -8,6 +8,7 @@ import passport from "passport";
 import mongoose from "mongoose";
 import session from "express-session";
 import path from "path";
+import flash from "express-flash";
 import MongoStroe from "connect-mongo";
 import { localMiddleware } from "./middleware";
 import routes from "./routes"; // URL들이 정의된 파일 가져옴
@@ -38,6 +39,8 @@ app.use(
     store: new CokieStore({ mongooseConnection: mongoose.connection }),
   })
 );
+app.use(flash()); // view에서 locals로 messages 쓸 수 있게 해줌
+
 app.use(passport.initialize());
 app.use(passport.session());
 

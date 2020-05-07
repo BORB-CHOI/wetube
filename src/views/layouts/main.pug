@@ -7,6 +7,10 @@ html
         title #{pageTitle} | #{siteName}
         link(rel="stylesheet", href="/static/styles.css")
     body
+        if messages.error
+            span=messages.error
+        else if messages.success
+            span=messages.success
         include ../partials/header
         main
             block content
