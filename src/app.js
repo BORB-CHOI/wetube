@@ -9,7 +9,7 @@ import mongoose from "mongoose";
 import session from "express-session";
 import path from "path";
 import flash from "express-flash";
-import MongoStroe from "connect-mongo";
+import MongoStore from "connect-mongo";
 import { localMiddleware } from "./middleware";
 import routes from "./routes"; // URL들이 정의된 파일 가져옴
 import userRouter from "./routers/userRouter"; // 경로지정자 파일 가져옴
@@ -21,7 +21,7 @@ import "./passport";
 
 const app = express();
 
-const CokieStore = MongoStroe(session); // 쿠키는 메모리에 있어 서버가 다시 시작될때 삭제되므로 MongoStroe에 저장
+const CokieStore = MongoStore(session); // 쿠키는 메모리에 있어 서버가 다시 시작될때 삭제되므로 MongoStroe에 저장
 
 app.use(helmet());
 app.set("view engine", "pug");
