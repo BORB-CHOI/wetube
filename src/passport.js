@@ -8,7 +8,7 @@ import {
 } from "./controllers/userController";
 import routes from "./routes";
 
-// passport가 req에 user, comment, video 객체를 담아줌.
+// passport가 req에 user 객체를 담아줌.
 
 passport.use(User.createStrategy());
 

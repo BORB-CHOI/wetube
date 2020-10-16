@@ -10,15 +10,15 @@ const UserSchema = new mongoose.Schema({
   comments: [
     {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "Comment"
-    }
+      ref: "Comment",
+    },
   ],
   videos: [
     {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "Video"
-    }
-  ]
+      ref: "Video",
+    },
+  ],
 });
 
 UserSchema.plugin(passportLocalMongoose, { usernameField: "email" });

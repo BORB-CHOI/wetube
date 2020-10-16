@@ -41,7 +41,7 @@ module.exports = {
 //   },
 //   rules: {}
 // };
-// 4.  npm install eslint-config-prettier || $yarn add eslint-config-prettier
+// 4.  npm install eslint-config-prettier || yarn add eslint-config-prettier
 // 5. .eslintrc.js파일내용 중, extends:의 값을 ["airbnb-base", "prettier"] 로 수정
 // 6. 저장후 실행 하면 ESlint가 에러를 잡아줌.
 // * 에러를 끄고싶을 땐 해당에러를 복사해서 파일의 rules에 객체로 선언하고 off처리. ex) rules: { "no-console": "off" }
