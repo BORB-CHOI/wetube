@@ -3,7 +3,7 @@ import morgan from "morgan"; // middleWare info catch ==> application all work l
 import helmet from "helmet"; // security을 위한 아직은 뭔지 모르는 것
 import bodyParser from "body-parser"; // 사진이나 비디오를 업로드 할 때, 제목이나 댓글같은 정보를 전달할때 form에 담음
 // 사용자가 보내는 requsest 정보에서 form이나 json 형태로 된 body를 검사해주는 middleWare
-import cookieParser from "cookie-parser"; // 쿠키를 전달받아 해석 가능하게 해주는 middleWare\
+import cookieParser from "cookie-parser"; // 쿠키를 전달받아 해석 가능하게 해주는 middleWare
 import passport from "passport";
 import mongoose from "mongoose";
 import session from "express-session";
